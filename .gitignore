@@ -19,7 +19,7 @@ _ide_helper.php
 /bower_components
 
 # IDEs and editors
-/.idea
+.idea
 .project
 .classpath
 *.launch

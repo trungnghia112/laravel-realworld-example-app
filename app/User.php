@@ -91,4 +91,14 @@ class User extends Authenticatable
     {
         return 'username';
     }
+
+    /**
+     * Get all the comments by the user.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function userCategories()
+    {
+        return $this->hasMany(UserCategory::class)->latest();
+    }
 }

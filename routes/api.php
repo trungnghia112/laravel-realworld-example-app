@@ -41,4 +41,17 @@ Route::group(['namespace' => 'Api'], function () {
 
     Route::get('tags', 'TagController@index');
 
+    Route::get('categories', 'CategoryController@index');
+
+
+    /*Route::get('user_categories', 'UserCategoryController@index');
+    Route::post('user_categories', 'UserCategoryController@store');
+    Route::delete('user_categories/{userCategory}', 'UserCategoryController@destroy');*/
+
+    Route::resource('user_categories', 'UserCategoryController', [
+        'only' => [
+            'index', 'store', 'destroy', 'update'
+        ]
+    ]);
+
 });
