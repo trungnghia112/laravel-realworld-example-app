@@ -65,6 +65,6 @@ class CommentController extends ApiController
     {
         $comment->delete();
 
-        return $this->respondSuccess();
+        return $this->respondSuccess('success');
     }
 }

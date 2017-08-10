@@ -72,11 +72,12 @@ class ApiController extends Controller
     /**
      * Respond with success.
      *
+     * @param $message
      * @return \Illuminate\Http\JsonResponse
      */
-    protected function respondSuccess()
+    protected function respondSuccess($message)
     {
-        return $this->respond(null);
+        return $this->respond($message);
     }
 
     /**

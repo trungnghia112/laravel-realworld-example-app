@@ -107,6 +107,6 @@ class ArticleController extends ApiController
     {
         $article->delete();
 
-        return $this->respondSuccess();
+        return $this->respondSuccess('success');
     }
 }
